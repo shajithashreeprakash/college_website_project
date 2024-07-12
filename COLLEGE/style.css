@@ -1,0 +1,134 @@
+:root{
+    --Primary:#e52165;
+    --primary-light:var(--Primary);
+    --Secondary: black;
+    --secondary-light:var(--Secondary);
+    --Tertiary: #f5f5f5;
+    --Tertiary-light:var(--Tertiary);
+
+ }
+/* ::selection{
+    color: blue;
+
+} */
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+li{
+    list-style-type: none;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    
+    width: 100%;
+    height: 100%;
+}
+
+.btn{
+    color: black;
+    display: inline-block;
+    background-color: var(--Primary);
+    padding: 10px 18px;
+    transition: 300ms;
+    text-align:justify;
+    }
+.btn:hover{
+   transform: translateY(-5px);
+   background-color: var(--Primary-light);
+   text-align:justify;
+
+
+}
+
+header {
+    min-height: 100vh;
+    width: 100%;
+   background: url(./kg2.jpg);
+   background-size: cover;
+   background-position: center;
+   position: relative;
+
+ 
+ }
+ .header-content{
+    width: 95%;
+    margin: auto;
+    padding: 20px 0;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 12vh;
+    padding: 0 2rem ;
+
+ }
+ .logo{
+    height: 120px;
+
+ }
+ .nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+}
+.nav-links a {
+    color: black;
+
+}
+.nav-links li::after{
+    content:'' ;
+    display: block;
+    background-color: black;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 0%;
+    height: 3px;
+    transform:scaleX(0);
+    transition: width 300ms; 
+
+}
+.nav-links li:hover::after{
+    width: 100%;
+    transition: 0.5s;
+    transform:scaleX(1);
+
+}
+@media only screen and (max-width:600%){
+    body{
+        display: none;
+        flex-direction: column;
+        background-color: #e52165;
+        position: absolute;
+        right: 0;
+        top:12vh;
+        height: 50vh;
+        padding: 1rem 0;
+    }
+    .nav-links{
+        display: none;
+    }
+
+}
+.text-center{
+    color: rgb(13, 13, 14);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+
+.text-center h1 {
+   margin: 1rem 0;
+}
